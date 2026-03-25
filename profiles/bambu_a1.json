@@ -1,0 +1,67 @@
+{
+  "printer": {
+    "name": "Bambu Lab A1",
+    "type": "bambu",
+    "protocol": {
+      "control": "MQTT",
+      "mqtt_port": 8883,
+      "file_transfer": "FTPS",
+      "ftps_port": 990,
+      "tls": true
+    },
+    "credentials_keys": {
+      "ip": "bambu_printer_ip",
+      "serial": "bambu_serial_number",
+      "access_code": "bambu_access_code"
+    }
+  },
+  "slicer": {
+    "name": "OrcaSlicer",
+    "binary_path": "/Applications/OrcaSlicer.app/Contents/MacOS/OrcaSlicer",
+    "printer_profile": "Bambu Lab A1",
+    "filaments": {
+      "PLA": "Bambu PLA Basic",
+      "PETG": "Bambu PETG Basic",
+      "TPU": "Bambu TPU 95A",
+      "ABS": "Bambu ABS"
+    }
+  },
+  "default_print_settings": {
+    "layer_height_mm": 0.2,
+    "infill_density_pct": 15,
+    "support_type": "tree",
+    "support_threshold_deg": 45,
+    "brim_width_mm": 5,
+    "speed_mm_s": 200
+  },
+  "materials": {
+    "PLA": {
+      "nozzle_temp_c": 220,
+      "bed_temp_c": 35,
+      "cooling_fan_pct": 100,
+      "retraction_mm": 0.8,
+      "min_wall_mm": 0.8
+    },
+    "PETG": {
+      "nozzle_temp_c": 240,
+      "bed_temp_c": 70,
+      "cooling_fan_pct": 50,
+      "retraction_mm": 1.0,
+      "min_wall_mm": 1.0
+    },
+    "TPU": {
+      "nozzle_temp_c": 230,
+      "bed_temp_c": 40,
+      "cooling_fan_pct": 80,
+      "retraction_mm": 0.5,
+      "min_wall_mm": 1.2
+    },
+    "ABS": {
+      "nozzle_temp_c": 250,
+      "bed_temp_c": 90,
+      "cooling_fan_pct": 20,
+      "retraction_mm": 1.0,
+      "min_wall_mm": 1.0
+    }
+  }
+}
